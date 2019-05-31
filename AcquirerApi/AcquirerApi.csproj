@@ -15,5 +15,6 @@
     <Folder Include="Enum\" />
     <Folder Include="Request\" />
     <Folder Include="Response\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 </Project>

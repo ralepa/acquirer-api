@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acquirer", "acquirer\acquirer.csproj", "{7C7AED77-F241-41A9-B083-7F9E8C6E0B99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcquirerApi", "AcquirerApi\AcquirerApi.csproj", "{7C7AED77-F241-41A9-B083-7F9E8C6E0B99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
