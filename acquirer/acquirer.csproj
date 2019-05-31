@@ -13,5 +13,7 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Enum\" />
+    <Folder Include="Request\" />
+    <Folder Include="Response\" />
   </ItemGroup>
 </Project>
