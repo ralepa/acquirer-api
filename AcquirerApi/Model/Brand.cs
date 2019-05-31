@@ -1,5 +1,5 @@
 ﻿using System;
-namespace acquirer.Model
+namespace AcquirerApi.Model
 {
     public class Brand
     {

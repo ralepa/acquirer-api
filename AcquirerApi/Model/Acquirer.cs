@@ -1,5 +1,7 @@
 ﻿using System;
-namespace acquirer.Model
+using System.Collections.Generic;
+
+namespace AcquirerApi.Model
 {
     public class Acquirer
     {
@@ -7,8 +9,6 @@ namespace acquirer.Model
 
         public string Name { get; set; }
 
-        public Acquirer()
-        {
-        }
+        public IList<DiscountRate> DiscountRates { get; set; }
     }
 }
