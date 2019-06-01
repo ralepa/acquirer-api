@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcquirerApi", "AcquirerApi\AcquirerApi.csproj", "{7C7AED77-F241-41A9-B083-7F9E8C6E0B99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcquirerApiTests", "AcquirerApiTests\AcquirerApiTests.csproj", "{6AB8C374-1825-488A-9B13-98EF9C082B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{7C7AED77-F241-41A9-B083-7F9E8C6E0B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C7AED77-F241-41A9-B083-7F9E8C6E0B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C7AED77-F241-41A9-B083-7F9E8C6E0B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB8C374-1825-488A-9B13-98EF9C082B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB8C374-1825-488A-9B13-98EF9C082B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB8C374-1825-488A-9B13-98EF9C082B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB8C374-1825-488A-9B13-98EF9C082B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
