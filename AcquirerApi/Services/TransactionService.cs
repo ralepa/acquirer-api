@@ -17,6 +17,7 @@ namespace AcquirerApi.Services
         public TransactionService()
         {
             transactionRepository = new TransactionRepository();
+            acquirerRepository = new AcquirerRepository();
             merchantDiscountRateService = new MerchantDiscountRateService();
         }
 
@@ -33,7 +34,7 @@ namespace AcquirerApi.Services
             {
                 TransactionType = GetTransactionType(transactionRequest.Tipo),
                 AcquirerId = acquirer.Id,
-                BrandId = acquirer.DiscountRates.First(mdr => mdr.Brand.Name.ToLower() == transactionRequest.Bandeira).Brand.Id,
+                BrandId = GetBrand(acquirer, transactionRequest.Bandeira).Id,
                 Value = transactionRequest.Valor
             };
 
@@ -45,6 +46,16 @@ namespace AcquirerApi.Services
             return response;
         }
 
+        private Brand GetBrand(Acquirer acquirer, string bandeira)
+        {
+            var mdr = acquirer.DiscountRates.FirstOrDefault(m => m.Brand.Name.ToLower() == bandeira);
+            if (mdr == null)
+            {
+                throw new ArgumentNullException(nameof(bandeira), "Bandeira inválida");
+            }
+            return mdr.Brand;
+        }
+
         private Acquirer GetAcquirer(string adquirente)
         {
             if (adquirente == null)
@@ -52,6 +63,10 @@ namespace AcquirerApi.Services
                 throw new ArgumentNullException(nameof(adquirente), "Adquirente não informada");
             }
             var acquirer = acquirerRepository.GetByName(adquirente);
+            if (acquirer == null)
+            {
+                throw new ArgumentNullException(nameof(adquirente), "Adquirente inválida");
+            }
             return acquirer;
         }
 
