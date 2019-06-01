@@ -1,5 +1,5 @@
 ﻿using System;
-namespace AcquirerApi.Enum
+namespace AcquirerApi.Enums
 {
     public enum TransactionType
     {

@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AcquirerApi.Repository
+namespace AcquirerApi.Repositories
 {
     public interface IBaseRepository<T>
     {
         ICollection<T> GetAll();
-
-        T Get(long id);
 
         T Add(T t);
 

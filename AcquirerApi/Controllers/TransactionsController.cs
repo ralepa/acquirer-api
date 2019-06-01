@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AcquirerApi.Request;
+using AcquirerApi.Response;
+using AcquirerApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AcquirerApi.Controllers
@@ -10,36 +13,19 @@ namespace AcquirerApi.Controllers
     [ApiController]
     public class TransactionController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        private readonly TransactionService transactionService;
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public TransactionController()
         {
-            return "value";
+            transactionService = new TransactionService();
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<TransactionResponse> Post([FromBody] TransactionRequest request)
         {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var result = transactionService.Add(request);
+            return Ok(result);
         }
     }
 }

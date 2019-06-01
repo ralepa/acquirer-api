@@ -1,7 +1,7 @@
 ﻿using System;
-using AcquirerApi.Enum;
+using AcquirerApi.Enums;
 
-namespace AcquirerApi.Model
+namespace AcquirerApi.Models
 {
     public class DiscountRate
     {

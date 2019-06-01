@@ -1,5 +1,5 @@
 ﻿using System;
-namespace AcquirerApi.Model
+namespace AcquirerApi.Models
 {
     public class Merchant
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using AcquirerApi.Model;
+using AcquirerApi.Models;
 
-namespace AcquirerApi.Repository
+namespace AcquirerApi.Repositories
 {
     public interface IMerchantRepository : IBaseRepository<Merchant>
     {

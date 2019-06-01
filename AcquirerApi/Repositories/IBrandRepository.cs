@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using AcquirerApi.Model;
+using AcquirerApi.Models;
 
-namespace AcquirerApi.Repository
+namespace AcquirerApi.Repositories
 {
     public interface IBrandRepository : IBaseRepository<Brand>
     {
-
+        Brand Get(long id);
     }
 }

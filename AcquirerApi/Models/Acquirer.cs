@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AcquirerApi.Model
+namespace AcquirerApi.Models
 {
     public class Acquirer
     {
